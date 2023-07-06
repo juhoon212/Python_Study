@@ -10,5 +10,6 @@ temp = int(input("기온은 어떄요? "))
 
 if(temp >= 30):
     print("너무 더워요. 나가지 마세요")
-elif temp >= 10 and temp < 30:
+elif temp >= 10 and temp < 30: # and 생략가능
     print("괜찮은 날씨에요")
+
