@@ -23,9 +23,19 @@ while index >= 1:
 # while True:
 #     print("{0}, 커피가 준비 되었습니다.".format(customer, index))
 
-customer = "토르"
-person = "Unknown"
+# customer = "토르"
+# person = "Unknown"
 
-while person != customer :
-     print("{0}, 커피가 준비 되었습니다.".format(customer))
-     person = input("이름이 어떻게 되세요?")
+# while person != customer :
+#      print("{0}, 커피가 준비 되었습니다.".format(customer))
+#      person = input("이름이 어떻게 되세요?")
+     
+absent = [2, 5] # 결석
+no_book = [7]
+
+for student in range(1, 11) :
+    if student in absent:
+        continue
+    print("{0}, 책을 읽어봐".format(student))
+    
+

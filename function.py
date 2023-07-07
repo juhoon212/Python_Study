@@ -28,3 +28,37 @@ def withdraw_night(balance, money):
 commission, balance = withdraw_night(balance, 500)
 print("수수료 {0} 원이며, 잔액은 {1} 원입니다."
       .format(commission, balance))
+
+# def profile(name,age, main_lang):
+#     print("이름 : {0} \t 나이: {1}\t주 사용 언어: {2}".format(name,age,main_lang))
+
+# profile("유재석", 20, "파이썬")
+# profile("김태호", 25, "자바")
+
+# 같은 학교 같은 학년 같은 반 수업
+# 함수 기본 값 작성
+
+# def profile(name, age=17, main_lang="파이썬"):
+#      print("이름 : {0} \t 나이: {1}\t주 사용 언어: {2}".format(name,age,main_lang))
+
+# profile("유재석")
+
+# def profile(name, age, main_lang):
+#     print(name, age, main_lang)
+
+# profile(name = "유재석",main_lang = "파이썬", age = 20) 
+# profile(main_lang="자바", age=25, name="김태호")
+
+#가변인자
+
+def profile(name, age, *language): # *문법은 가변인자로 유연하게 매개변수를 받을 수 있다. 
+    print("이름 : {0}\t 나이: {1}\t".format(name,age) ,end="")
+    for lang in language: # => lang은 변수다.
+        print(lang, end=" ")
+    print() # => 줄바꿈
+    
+profile("유재석", 20, "Python", "Java", "C", "C++", "C#", "JavaScript")
+profile("김태호", 25, "Kotlin","Swift", "", "", "")
+
+
+
