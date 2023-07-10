@@ -59,6 +59,13 @@ def profile(name, age, *language): # *문법은 가변인자로 유연하게 매
     
 profile("유재석", 20, "Python", "Java", "C", "C++", "C#", "JavaScript")
 profile("김태호", 25, "Kotlin","Swift", "", "", "")
- 
+
+a = 100
+result = 0
+for i in range(1,3):
+    result = a >> i
+    result = result + 1
+
+print(result)
 
 
