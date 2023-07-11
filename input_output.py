@@ -1,5 +1,7 @@
-# 표준 입출력
 import sys
+
+# 표준 입출력
+
 
 # print("Python", "Java", sep=" vs ") 문자열 중간에 삽입 가능
 # print("무엇이 더 재미있을까요?")
@@ -26,6 +28,10 @@ for subject, score in scores2.items():
 
 for num in range(1,21):
     print("대기번호 : " + str(num).zfill(3))
+
+
+
+
  
     
 
