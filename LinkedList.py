@@ -25,6 +25,13 @@ class LinkedList(object):
             while(current.next):
                 current = current.next
             current.next = new_node
+            
+    def get(self, idx):
+        current = self.head
+        for _ in range(idx):
+            current = current.next
+        return current.value
+    
     def insert(self, idx, value):
         new_node = Node(value)
         new_node.value = value
@@ -32,19 +39,13 @@ class LinkedList(object):
 
         if idx == 0:
             self.head = new_node
-            self.head.next = current
+            self.head.next = current # idx 가 0 이면 head가 가르키는 다음 요소를 current로 지정
         else:
             for _ in range(idx - 1):
-                current = current.next
-                new_node.next = current.next
-                current.next = new_node
+                current = current.next  # current가 다음 노드를 가리키게 한다.
+                new_node.next = current.next # 새로운 노드가 current의 다음노드를 가리키게 한다.
+                current.next = new_node #current의 다음이 새로운 노드를 가리키게 한다. 
 
-
-
-
-
-        
-        
 
 
 ll = LinkedList()
@@ -54,8 +55,7 @@ ll.append(3)
 ll.append(4)
 ll.insert(idx = 2, value = 9)
 
-for i in range(1):
-    print(i)
+
 
 
 
