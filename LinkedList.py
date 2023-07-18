@@ -45,6 +45,16 @@ class LinkedList(object):
                 current = current.next  # current가 다음 노드를 가리키게 한다.
                 new_node.next = current.next # 새로운 노드가 current의 다음노드를 가리키게 한다.
                 current.next = new_node #current의 다음이 새로운 노드를 가리키게 한다. 
+    def remove(self, idx):
+        if idx == 0:
+            self.head = self.head.next # idx가 0이면 head는 0번쨰 원소에서 1번쨰 원소를 가리킨다.
+                                        # 0번째 원소는 가리키는 주소가 없으므로 gc에 의해 삭제
+        else:
+            current = self.head # head 가 가리키는 원소가 current
+            for _ in range(idx - 1):    
+                current = current.next # 다음 요소를 가리킴
+                current.next = current.next.next # 다음 요소가 그 다음요소를 가리키므로 다음 요소는
+                                                # 가리키는 원소가 없으므로 gc에 의해 삭제
 
 
 
