@@ -27,6 +27,12 @@ index = s1.index("t", index+1);
 #index와 find()의 차이점 => index를 사용하여 없는 문자열을 찾을 시 ValueError(Excepiton)발생
 print(s1.find("e")); 
 
+#문자열 자르기
+
+item1 = "apple"
+
+print(item1[:3]) #app
+
 
 
 
