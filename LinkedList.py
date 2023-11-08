@@ -54,8 +54,7 @@ ll.append(3)
 ll.append(4)
 ll.insert(idx = 2, value = 9)
 
-for i in range(1):
-    print(i)
+
 
 
 
