@@ -25,6 +25,24 @@ class LinkedList(object):
             while(current.next):
                 current = current.next
             current.next = new_node
+    def get(self, idx):
+        current = self.head
+        for _ in range(idx):
+            current = current.next
+        return current.value
+    def insert(self, idx, value):
+        new_node = Node(value)
+        current = self.head
+        if idx == 0:
+            new_node.next = self.head
+        else:
+            for _ in range(idx - 1):
+                current = current.next
+                new_node.next = current.next
+                current.next = new_node
+
+
+
 
 
 ll = LinkedList()
@@ -32,5 +50,6 @@ ll.append(1)
 ll.append(2)
 ll.append(3)
 ll.append(4)
-      
+ll.insert(idx = 2, value = 9)
+
         
