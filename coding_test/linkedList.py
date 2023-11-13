@@ -40,6 +40,22 @@ class LinkedList(object):
                 current = current.next
                 new_node.next = current.next
                 current.next = new_node
+    def remove(self, idx):
+        current = self.head
+        if idx == 0:
+            self.head = self.head.next
+        for _ in range(idx - 1):
+            current = current.next
+            current.next = current.next.next
+    def insert_back(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
+            self.tail = self.tail.next
+
 
 
 
@@ -50,6 +66,7 @@ ll.append(1)
 ll.append(2)
 ll.append(3)
 ll.append(4)
-ll.insert(idx = 2, value = 9)
+ll.append(5)
+ll.remove(3)
 
         
